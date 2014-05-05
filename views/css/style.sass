@@ -29,7 +29,7 @@ body
     display: block
     font-size: 0
     content: " "
-    clear: both
+    .special: both
     height: 0
 
 .ie7 #content
@@ -69,7 +69,7 @@ body
     visibility: hidden
     display: block
     content: " "
-    clear: both
+    .special: both
     height: 0
 
   .details, .company-details
@@ -79,7 +79,7 @@ body
       visibility: hidden
       display: block
       content: " "
-      clear: both
+      .special: both
       height: 0
 
   .company-details
@@ -276,6 +276,28 @@ p.about
 
     span
       color: #444
+	  
+	  
+#main
+  ul.solution-list
+    margin-bottom: 20px
+    float: none
+    display: block
+    width: 100%
+    list-style: none
+  
+    li
+      margin-top: 5px
+      &.property
+        margin-bottom: 10px
+      &.special
+        margin-top: 10px
+        font-weight: bold
+	  
+  .structure
+    margin-top: 10px 
+
+  
 
 @import handheld
 @import print
