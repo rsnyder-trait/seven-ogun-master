@@ -1,0 +1,122 @@
+body > div  >
+
+  & header
+    margin: 0 0 100px 0
+
+    h1
+      background: url(/images/logo.png) no-repeat top left
+      height: 90px
+      left: 40px
+      position: absolute
+      text-indent: -9999px
+      top: 30px
+      width: 84px
+
+    nav
+      margin: 30px 0 0 200px
+
+      ul
+        border-bottom: 1px solid #d5d5d5
+        font-size: 85%
+        line-height: 1
+        margin: 0
+        padding: 0
+        width: 552px
+
+        &:after
+          visibility: hidden
+          display: block
+          content: " "
+          clear: both
+          height: 0
+
+        li
+          color: #444
+          cursor: pointer
+          float: left
+          margin: 0 10px
+          padding: 0 0 2px 0
+          position: relative
+          text-transform: uppercase
+
+          span
+            display: block
+            padding: 1px 0 0 0
+
+          a, a:visited
+            color: #444
+            display: block
+            padding: 1px 0 0 0
+            text-decoration: none
+
+          &.selected
+
+            a
+              color: #004990
+
+            li a
+              color: #444
+
+            li a:hover
+              color: #004990
+
+            li.selected a
+              color: #004990
+
+          a:hover
+            bottom: 0
+            color: #004990
+
+          &.subnav span
+            background: url(/images/nav-arrow-inactive.png) no-repeat right center
+            display: block
+            padding: 1px 23px 0 0
+
+          ul
+            border: none
+            font-size: 91%
+            left: -9999px
+            margin: 0
+            opacity: 0
+            padding: 7px 0 0 0
+            position: absolute
+
+            li
+              float: none
+              font-family: Arial, Helvetica, sans-serif
+              margin: 0
+              padding: 0 0 3px 0
+
+              a
+                display: block
+                white-space: nowrap
+
+          &.subnav.selected
+            span
+              background: url(/images/nav-arrow-active.png) no-repeat right center
+
+          &.subnav:hover
+            background: url(/images/nav-tab-bg.png) no-repeat bottom right
+            bottom: -1px
+            color: #004990
+
+            span
+              background: url(/images/nav-arrow-hover.png) no-repeat right center
+              margin-top: -1px
+              padding-bottom: 1px
+
+            ul
+              left: 0
+              opacity: 1
+
+              li
+                background: none
+                bottom: 0
+
+                span
+                  background: none
+
+// ie7 fixes
+body > div  > header nav ul
+  background: url(/images/transparent-bg.png) no-repeat top left
+  display: inline-block

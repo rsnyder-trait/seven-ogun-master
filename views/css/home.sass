@@ -1,0 +1,191 @@
+#overview
+  zoom: 1
+  
+  &:before, &:after
+    content: ""
+    display: table
+    
+  &:after
+    clear: both
+  
+#our-solutions
+  float: left
+  overflow: hidden
+  width: 526px
+
+  #solutions-title
+    display: inline-block
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 77%
+    margin: 0 0 0 10px
+    text-transform: uppercase
+
+  #pager
+    display: inline-block
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 77%
+    list-style: none
+    margin: 0 0 0 10px
+    padding: 0
+
+    li
+      cursor: pointer
+      display: inline-block
+      margin: 0 5px 0 0
+      vertical-align: top
+
+      &.activeSlide
+        border-bottom: 1px solid #ccc
+        color: #B30838
+
+  #slideshow
+    margin: 0 0 20px 0
+    width: 3760px
+
+  .slide
+    display: inline-block
+    width: 526px
+
+    &:after
+      content: " "
+      display: block
+      height: 0
+      visibility: hidden
+      clear: both
+
+    img
+      display: block
+      float: left
+
+    .testimonial
+      margin: 0 0 0 538px
+
+      h2
+        color: $primary1
+        font-weight: normal
+        font-size: 85%
+        line-height: 1
+        text-transform: uppercase
+
+      blockquote
+        color: $tertiary1
+        font-family: Arial, Helvetica, sans-serif
+        font-size: 85%
+        line-height: 1
+        margin: 10px 0
+
+      .credit
+        color: $tertiary2
+        font-family: Arial, Helvetica, sans-serif
+        font-size: 85%
+        line-height: 1
+
+.ie7 #our-solutions 
+
+  .slide, #solutions-title, #pager, #pager li
+    display: inline
+    zoom: 1
+
+#testimonial
+  margin: 0 0 0 546px
+  padding: 20px 0 0 0
+  
+  h2
+    color: $primary1
+    font-weight: normal
+    font-size: 85%
+    line-height: 1
+    text-transform: uppercase
+    
+  blockquote
+    color: $tertiary1
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 85%
+    line-height: 1
+    margin: 10px 0
+
+  .credit
+    color: $tertiary2
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 85%
+    line-height: 1
+
+#additional-information
+  background: url(/images/home-additional-info-bg.png) repeat-y top center
+  clear: both
+  margin: 40px 0 0 0
+
+  &:after
+    visibility: hidden
+    display: block
+    font-size: 0
+    content: " "
+    clear: both
+    height: 0
+
+  .more-button
+    background: #fafafa url(/images/more-button-bg.png) repeat-x top left
+    border-radius: 3px
+    -moz-border-radius: 3px
+    -webkit-border-radius: 3px
+    color: $tertiary2
+    display: inline-block
+    font-size: 85%
+    line-height: 1
+    padding: 5px 8px
+    text-decoration: none
+
+    span
+      color: $secondary1
+
+  section
+    color: $tertiary2
+    float: left
+    font-family: Arial, Helvetica, sans-serif
+    padding: 0 30px 0 0
+    width: 220px
+
+    h2
+      color: $secondary1
+      font-size: 108%
+      font-weight: normal
+      line-height: 1
+      margin: 0 0 12px 0
+
+    p, ul
+      font-size: 100%
+      line-height: 1
+
+    p
+      margin: 0 0 12px 0
+
+    ul
+      list-style-type: square
+      margin: 0 0 0 15px
+      padding: 0
+
+  section + section
+    padding: 0 30px
+    width: 190px
+
+    h2
+      color: $primary1
+
+    img
+      margin: 0 8px 0 0
+      vertical-align: middle
+
+  section + section + section
+    padding: 0 0 0 30px
+    width: 220px
+
+    h2
+      color: $alt1
+
+.ie7
+  #additional-information, #our-solutions .slide
+    display: inline-block
+
+  #additional-information a
+    display: inline
+    zoom: 1

@@ -1,0 +1,49 @@
+%form{ :method => 'post', :action => '/contact', :id => 'contact-form' }
+  - if flash[:notice]
+    .notice= flash[:notice]
+  .required-notice <abbr>*</abbr> required
+  %ol
+    %li
+      %label{ :for => 'contact_name' } Full Name<abbr>*</abbr>
+      %input{ :type => 'text', :id => 'contact_name', :name => 'contact[name]', :value => @form.name }
+      - if @form.has_error? :name
+        .error= @form.errors[:name]
+    %li
+      %label{ :for => 'contact_email' } Email<abbr>*</abbr>
+      %input{ :type => 'text', :id => 'contact_email', :name => 'contact[email]', :value => @form.email }
+      - if @form.has_error? :email
+        .error= @form.errors[:email]
+    %li
+      %label{ :for => 'contact_phone' } Phone
+      %input{ :type => 'text', :id => 'contact_phone', :name => 'contact[phone]', :value => @form.phone }
+      - if @form.has_error? :phone
+        .error= @form.errors[:phone]
+    %li
+      %label{ :for => 'contact_message' } Message<abbr>*</abbr>
+      %textarea{ :id => 'contact_message', :name => 'contact[message]', :value => @form.message }
+      - if @form.has_error? :message
+        .error= @form.errors[:message]
+
+  %ol.buttons
+    %li
+      %button{ :type => 'submit', :value => 'submit' } Submit <span>&raquo;</span>
+
+#contact-info
+  %h2 Contact Us
+  %p
+    Seven-Ogun International is your one-stop boutique pre-press room
+    specialists. To maximize response time, we carry inventory in-house to
+    ensure our customer’s demands are always met in a timely manner.
+  %section#vcard
+    .org Seven-Ogun International
+    .ad
+      %span.street-address 670 Lakeview Plaza Blvd Suite K
+      %span.locality> Worthington
+      ,
+      %span.region OH
+      %span.postal-code 43085
+    %div.alt-contact
+      %div
+        E: <span class="email"><a href="mailto:info@sevenogun.com">info@sevenogun.com</a></span>
+      %div
+        P: <span class="tel">614.888.8939</span>

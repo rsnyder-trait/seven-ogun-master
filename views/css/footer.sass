@@ -1,0 +1,50 @@
+body > footer
+  font-size: 77%
+  font-style: italic
+  line-height: 1
+  margin: 20px 0 0 0
+
+  a, a:visited
+    color: #444
+    text-decoration: none
+
+  #vcard
+    display: inline-block
+
+    .org, .ad, .alt-contact
+      display: inline-block
+      vertical-align: top
+
+    .org
+      padding: 0 0 0 45px
+
+    .ad
+      border-right: 1px solid #999
+      padding: 0 15px
+
+    .alt-contact
+      border-right: 1px solid #999
+      padding: 0 15px
+
+    .street-address
+      display: block
+
+  .contact
+    display: inline-block
+    padding: 0 15px
+    vertical-align: top
+
+// IE7 Fixes
+.ie7
+
+  #vcard
+    display: inline
+    zoom: 1
+
+    .org, .ad, .alt-contact
+      display: inline
+      zoom: 1
+
+  .contact
+    display: inline
+    zoom: 1
